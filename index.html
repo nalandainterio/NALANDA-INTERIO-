@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nalanda Interio — Kitchen Design Studio, Nalanda (Bihar)</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23221D16'/><text x='32' y='45' font-family='Georgia' font-size='38' font-style='italic' fill='%23BC4B26' text-anchor='middle'>N</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+:root{
+  --bone:#F2EDE4; --bone2:#E9E2D3;
+  --ink:#221D16; --ink2:#5A5142;
+  --terra:#BC4B26; --clay:#E0764C;
+  --green:#2A352C;
+  --line:rgba(34,29,22,.16);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Archivo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bone);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.locked{overflow:hidden}
+::selection{background:var(--terra);color:var(--bone)}
+img{display:block}
+button{font-family:var(--sans)}
+section{padding:104px 0;scroll-margin-top:90px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+.it{font-style:italic;font-weight:400;color:var(--terra)}
+.dark-sec .it{color:var(--clay)}
+
+/* film grain */
+.grain{position:fixed;inset:0;z-index:7;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='240' height='240' filter='url(%23n)' opacity='0.55'/></svg>")}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.65,.2,1),transform .9s cubic-bezier(.2,.65,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(242,237,228,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 28px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-family:var(--serif);font-weight:600;font-size:1.3rem;letter-spacing:.01em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo-dot{color:var(--terra)}
+.nav-links{display:flex;gap:34px}
+.nav-links a{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);text-decoration:none;position:relative;padding:5px 0}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.burger{display:none;width:42px;height:42px;background:none;border:none;cursor:pointer;color:var(--ink);place-items:center}
+.burger svg{width:22px;height:22px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bone);border:1px solid var(--ink);border-radius:999px;padding:14px 26px;font:500 .78rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s,color .3s,border-color .3s}
+.btn svg{width:15px;height:15px}
+.btn:hover{background:var(--terra);border-color:var(--terra);color:#fff}
+.btn-sm{padding:11px 20px}
+.btn-light{background:var(--bone);border-color:var(--bone);color:var(--ink)}
+.btn-light:hover{background:var(--clay);border-color:var(--clay);color:#fff}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(34,29,22,.35)}
+.btn-ghost:hover{background:var(--ink);border-color:var(--ink);color:var(--bone)}
+
+/* mobile menu */
+.mobile-menu{position:fixed;inset:0;z-index:250;background:var(--bone);display:flex;flex-direction:column;justify-content:center;padding:40px 32px;transform:translateY(-102%);transition:transform .55s cubic-bezier(.25,.75,.2,1)}
+.mobile-menu.open{transform:none}
+.mobile-menu a{font-family:var(--serif);font-size:2.3rem;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.mobile-menu a.mm-cta{color:var(--terra)}
+.mm-close{position:absolute;top:22px;right:22px;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.mm-meta{margin-top:28px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);line-height:2.1}
+
+/* ---------- hero ---------- */
+.hero{padding:158px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:end}
+.kicker{display:flex;align-items:center;gap:12px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);margin-bottom:26px}
+.kicker::before{content:'';width:34px;height:1px;background:var(--terra);flex:none}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.9rem,6.2vw,5.4rem);line-height:1.02;letter-spacing:-.02em}
+.hero-sub{margin:26px 0 34px;max-width:46ch;color:var(--ink2);font-size:1.02rem;line-height:1.65}
+.hero-cta{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--terra);padding-bottom:4px;transition:color .3s}
+.link-arrow svg{width:14px;height:14px;color:var(--terra)}
+.link-arrow:hover{color:var(--terra)}
+.hero-meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:36px;padding-top:22px;border-top:1px solid var(--line);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.hero-meta span{display:inline-flex;gap:9px;align-items:center}
+.hero-meta svg{width:14px;height:14px;color:var(--terra);flex:none}
+.hero-meta b{font-weight:500;color:var(--ink)}
+.hero-visual{position:relative}
+.hero-img{width:100%;aspect-ratio:4/4.9;object-fit:cover}
+.hero-chip{position:absolute;left:16px;bottom:16px;background:var(--bone);padding:11px 16px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:flex;gap:9px;align-items:center}
+.chip-dot{width:7px;height:7px;background:var(--terra);transform:rotate(45deg);display:inline-block;flex:none}
+.badge{position:absolute;top:-44px;left:-44px;width:128px;height:128px;background:var(--bone);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;z-index:2}
+.badge svg{width:100%;height:100%;animation:spin 16s linear infinite}
+.badge text{font-family:var(--sans);font-size:10px;letter-spacing:1.6px;fill:var(--ink)}
+.badge .core{position:absolute;width:10px;height:10px;background:var(--terra);transform:rotate(45deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.stats{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:72px;padding:34px 0 92px}
+.stat-num{font-family:var(--serif);font-size:2.7rem;font-weight:500;line-height:1}
+.stat-num .suf{color:var(--terra);font-style:italic;font-size:1.55rem;margin-left:3px}
+.stat-label{margin-top:9px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:var(--bone);overflow:hidden;padding:15px 0}
+.mq-track{display:flex;width:max-content;animation:mq 26s linear infinite}
+.mq-group{display:flex;align-items:center;gap:42px;padding-right:42px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+.dia{width:6px;height:6px;background:var(--clay);transform:rotate(45deg);flex:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- section heads ---------- */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:54px}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);margin-bottom:18px}
+.eb-idx{font-family:var(--serif);font-style:italic;color:var(--terra);font-size:1.05rem;letter-spacing:0}
+.eb-line{width:44px;height:1px;background:var(--terra);flex:none}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.2vw,3.4rem);letter-spacing:-.015em;line-height:1.08}
+h3{font-weight:inherit}
+.sec-note{max-width:34ch;color:var(--ink2);font-size:.94rem;line-height:1.65;padding-bottom:6px}
+
+/* ---------- services ---------- */
+.svc-list{border-top:1px solid var(--line)}
+.svc{border-bottom:1px solid var(--line)}
+.svc-head{display:grid;grid-template-columns:70px 1fr 46px;align-items:center;gap:18px;padding:28px 0;cursor:pointer;user-select:none}
+.svc-head:focus-visible{outline:2px solid var(--terra);outline-offset:-2px}
+.svc-no{font-family:var(--serif);font-style:italic;color:var(--terra);font-size:1.05rem}
+.svc-title{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:500;transition:transform .35s,color .35s}
+.svc-head:hover .svc-title{transform:translateX(10px);color:var(--terra)}
+.svc-plus{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .35s,background .35s,color .35s,border-color .35s}
+.svc-plus svg{width:16px;height:16px}
+.svc.open .svc-plus{transform:rotate(45deg);background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.svc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.25,.7,.2,1)}
+.svc.open .svc-body{grid-template-rows:1fr}
+.svc-body-in{overflow:hidden}
+.svc-cols{display:grid;grid-template-columns:1fr 300px;gap:44px;padding:4px 0 38px 88px}
+.svc-desc{color:var(--ink2);line-height:1.7;max-width:56ch}
+.svc-tags{margin-top:18px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.svc-img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.svc-preview{position:fixed;z-index:60;width:250px;aspect-ratio:4/3;overflow:hidden;pointer-events:none;opacity:0;transform:scale(.92) rotate(-2.5deg);transition:opacity .3s,transform .3s;box-shadow:0 24px 60px -18px rgba(34,29,22,.45)}
+.svc-preview.on{opacity:1;transform:scale(1) rotate(-2.5deg)}
+.svc-preview img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.proj{position:relative;margin:0}
+.ph{overflow:hidden}
+.proj img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
+.proj:hover img{transform:scale(1.045)}
+.p1{grid-column:1/8}.p1 img{aspect-ratio:16/11}
+.p2{grid-column:8/13;margin-top:88px}.p2 img{aspect-ratio:4/4.7}
+.p3{grid-column:1/6}.p3 img{aspect-ratio:4/4.4}
+.p4{grid-column:6/13;margin-top:64px}.p4 img{aspect-ratio:16/10}
+.p5{grid-column:1/13}.p5 img{aspect-ratio:21/8}
+.proj-cap{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:13px;margin-top:14px;border-top:1px solid var(--line)}
+.proj-name{font-family:var(--serif);font-size:1.25rem;transition:color .3s}
+.proj:hover .proj-name{color:var(--terra)}
+.proj-meta{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);text-align:right}
+
+/* ---------- process ---------- */
+.dark-sec{background:var(--green);color:var(--bone)}
+.dark-sec .eyebrow{color:rgba(242,237,228,.62)}
+.dark-sec .sec-note{color:rgba(242,237,228,.68)}
+.step{display:grid;grid-template-columns:120px 1fr 160px;gap:28px;padding:34px 0;border-top:1px solid rgba(242,237,228,.16);align-items:start}
+.step:last-child{border-bottom:1px solid rgba(242,237,228,.16)}
+.step-no{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:var(--clay);line-height:1}
+.step-title{font-family:var(--serif);font-size:1.55rem;font-weight:500;margin-bottom:10px}
+.step-desc{color:rgba(242,237,228,.78);max-width:58ch;line-height:1.65}
+.step-when{justify-self:end;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(242,237,228,.32);border-radius:999px;padding:9px 15px;color:rgba(242,237,228,.88);white-space:nowrap}
+.proc-note{display:flex;gap:12px;align-items:center;margin-top:36px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,237,228,.72)}
+
+/* ---------- quote ---------- */
+.quote-sec{padding:120px 0}
+.quote-mark{font-family:var(--serif);font-size:7rem;line-height:.55;color:var(--terra);display:block;margin-bottom:20px}
+.quote-text{font-family:var(--serif);font-size:clamp(1.55rem,3.2vw,2.45rem);line-height:1.32;max-width:26em;border:none}
+.quote-by{margin-top:30px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-lede{margin:18px 0 10px;color:var(--ink2);line-height:1.65;max-width:44ch}
+.c-rows{margin-top:26px}
+.c-row{display:flex;gap:18px;align-items:flex-start;padding:19px 0;border-top:1px solid var(--line)}
+.c-ic{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;flex:none;color:var(--terra)}
+.c-ic svg{width:17px;height:17px}
+.c-lab{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);margin-bottom:4px}
+.c-val{font-size:1.05rem;color:var(--ink);text-decoration:none}
+a.c-val:hover{color:var(--terra)}
+.form-card{background:var(--ink);color:var(--bone);padding:44px;border-radius:4px}
+.f-title{font-family:var(--serif);font-size:1.7rem;font-weight:500;margin-bottom:6px}
+.f-sub{color:rgba(242,237,228,.68);font-size:.9rem;margin-bottom:30px}
+.field{margin-bottom:24px}
+.field label{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,237,228,.62);margin-bottom:8px}
+.opt{color:rgba(242,237,228,.45);text-transform:none;letter-spacing:.03em}
+.field input,.field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(242,237,228,.3);color:var(--bone);font:400 1rem var(--sans);padding:10px 2px;outline:none;transition:border-color .3s;border-radius:0}
+.field input:focus,.field textarea:focus{border-color:var(--clay)}
+.field textarea{resize:vertical;min-height:80px}
+.form-card ::placeholder{color:rgba(242,237,228,.35)}
+.f-err{display:none;font-size:.75rem;color:#F0906B;margin-top:7px}
+.field.err input{border-color:#E4573D}
+.field.err .f-err{display:block}
+.form-card .btn{width:100%;justify-content:center}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:var(--bone);padding:84px 0 0}
+.foot-word{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,8.4vw,7rem);letter-spacing:-.02em;line-height:1;border-bottom:1px solid rgba(242,237,228,.16);padding-bottom:44px}
+.fdot{color:var(--terra)}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:52px 0}
+.foot-h{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,228,.6);margin-bottom:16px}
+.foot-grid a{display:block;color:rgba(242,237,228,.85);text-decoration:none;font-size:.92rem;line-height:2.1;transition:color .25s}
+.foot-grid a:hover{color:var(--clay)}
+.foot-grid p{color:rgba(242,237,228,.85);font-size:.92rem;line-height:1.9}
+.foot-brand p{max-width:36ch}
+.foot-bottom{border-top:1px solid rgba(242,237,228,.16);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.78rem;color:rgba(242,237,228,.65)}
+.owner-link{display:inline-flex;gap:9px;align-items:center;background:none;border:1px solid rgba(242,237,228,.3);color:var(--bone);border-radius:999px;padding:10px 18px;font:500 .7rem var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:border-color .3s,color .3s}
+.owner-link svg{width:13px;height:13px}
+.owner-link:hover{border-color:var(--clay);color:var(--clay)}
+
+/* ---------- modals ---------- */
+.modal{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:rgba(24,20,15,.55);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .3s}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-card{background:var(--bone);color:var(--ink);width:min(430px,100%);padding:38px;position:relative;transform:translateY(16px) scale(.98);transition:transform .35s cubic-bezier(.2,.7,.2,1);box-shadow:0 40px 90px -30px rgba(0,0,0,.55)}
+.modal.show .modal-card{transform:none}
+.modal-card.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.m-title{font-family:var(--serif);font-size:1.6rem;font-weight:500;margin-bottom:6px}
+.m-sub{color:var(--ink2);font-size:.88rem;margin-bottom:26px}
+.m-close{position:absolute;top:14px;right:14px;width:34px;height:34px;background:none;border:none;cursor:pointer;color:var(--ink2);display:grid;place-items:center;border-radius:50%}
+.m-close:hover{background:var(--bone2)}
+.m-close svg{width:17px;height:17px}
+.m-field{margin-bottom:18px}
+.m-field label{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);margin-bottom:7px}
+.m-field input{width:100%;border:none;border-bottom:1px solid rgba(34,29,22,.3);background:transparent;padding:10px 2px;font:400 .95rem var(--sans);color:var(--ink);outline:none;transition:border-color .3s;border-radius:0}
+.m-field input:focus{border-color:var(--terra)}
+.m-error{display:none;color:#B33A18;font-size:.8rem;margin:-4px 0 16px}
+.m-error.show{display:block}
+.m-btn{width:100%;justify-content:center;margin-top:8px}
+.m-row{display:flex;gap:10px}
+.m-row .m-btn{flex:1;margin-top:8px}
+.img-prev-box{height:170px;background:var(--bone2);overflow:hidden;margin-bottom:16px}
+.img-prev-box img{width:100%;height:100%;object-fit:cover}
+.upload-btn{display:flex;gap:10px;align-items:center;justify-content:center;border:1.5px dashed rgba(34,29,22,.35);padding:15px;border-radius:4px;cursor:pointer;font-size:.82rem;letter-spacing:.06em;color:var(--ink2);transition:border-color .3s,color .3s;margin-bottom:20px}
+.upload-btn svg{width:16px;height:16px}
+.upload-btn:hover{border-color:var(--terra);color:var(--terra)}
+.upload-btn input{display:none}
+.modal-img-card{width:min(470px,100%)}
+
+/* ---------- admin bar & edit mode ---------- */
+.admin-bar{position:fixed;left:50%;bottom:22px;transform:translate(-50%,140%);z-index:150;background:var(--ink);color:var(--bone);display:flex;align-items:center;gap:20px;padding:12px 12px 12px 22px;border-radius:999px;border:1px solid rgba(242,237,228,.14);box-shadow:0 20px 50px -12px rgba(0,0,0,.45);transition:transform .45s cubic-bezier(.2,.7,.2,1);max-width:calc(100vw - 32px);flex-wrap:wrap}
+.admin-bar.show{transform:translate(-50%,0)}
+.ab-user{display:flex;gap:9px;align-items:center;font-size:.8rem;white-space:nowrap}
+.ab-user svg{width:15px;height:15px;color:var(--clay)}
+.ab-live{width:7px;height:7px;border-radius:50%;background:var(--clay);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.ab-status{display:flex;gap:7px;align-items:center;font-size:.72rem;color:rgba(242,237,228,.68);white-space:nowrap}
+.ab-dot{width:7px;height:7px;border-radius:50%;background:#7FA37B;transition:background .3s}
+.ab-dot.busy{background:var(--clay);animation:pulse .8s infinite}
+.ab-actions{display:flex;gap:8px;flex-wrap:wrap}
+.ab-btn{display:inline-flex;gap:7px;align-items:center;background:rgba(242,237,228,.1);border:1px solid rgba(242,237,228,.22);color:var(--bone);border-radius:999px;padding:9px 16px;font:500 .7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .25s,border-color .25s,color .25s;white-space:nowrap}
+.ab-btn svg{width:13px;height:13px}
+.ab-btn:hover{background:rgba(242,237,228,.22)}
+.ab-btn.primary{background:var(--clay);border-color:var(--clay);color:#fff}
+.ab-btn.primary:hover{background:#C9602F;border-color:#C9602F}
+.ab-btn.danger:hover{border-color:#E4573D;color:#F0906B}
+
+body.editing [data-edit]{outline:1.5px dashed rgba(188,75,38,.55);outline-offset:4px;border-radius:2px;cursor:text;caret-color:var(--terra)}
+body.editing [data-edit]:hover{outline-color:var(--terra);background:rgba(188,75,38,.06)}
+body.editing [data-edit]:focus{outline:2px solid var(--terra);background:rgba(188,75,38,.08)}
+body.editing [data-img]{cursor:pointer}
+body.editing [data-img]:hover{outline:2.5px solid var(--terra);outline-offset:3px}
+.img-chip{position:fixed;z-index:90;display:flex;gap:8px;align-items:center;background:var(--ink);color:var(--bone);padding:9px 14px;border-radius:999px;font-size:.72rem;letter-spacing:.06em;pointer-events:none;opacity:0;transition:opacity .2s;white-space:nowrap}
+.img-chip svg{width:13px;height:13px;color:var(--clay)}
+.img-chip.on{opacity:1}
+
+/* ---------- toasts ---------- */
+.toasts{position:fixed;right:22px;bottom:22px;z-index:300;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+body.editing .toasts{bottom:96px}
+.toast{display:flex;gap:11px;align-items:center;background:var(--ink);color:var(--bone);padding:14px 18px;border-radius:6px;font-size:.85rem;max-width:340px;box-shadow:0 18px 40px -12px rgba(0,0,0,.4);animation:tIn .4s cubic-bezier(.2,.7,.2,1)}
+.toast svg{width:16px;height:16px;color:var(--clay);flex:none}
+.toast.out{animation:tOut .3s forwards}
+@keyframes tIn{from{opacity:0;transform:translateY(12px)}}
+@keyframes tOut{to{opacity:0;transform:translateY(8px)}}
+
+/* ---------- responsive ---------- */
+@media(max-width:1020px){
+  .hero{padding-top:130px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-visual{max-width:540px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:18px}
+  .svc-cols{grid-template-columns:1fr;padding-left:0;gap:24px}
+  .svc-img{max-width:420px}
+  .contact-grid{grid-template-columns:1fr;gap:56px}
+  .step{grid-template-columns:64px 1fr;gap:18px}
+  .step-when{grid-column:2;justify-self:start}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .form-card{padding:32px}
+}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .burger{display:grid}
+}
+@media(max-width:640px){
+  section{padding:72px 0}
+  .p1,.p2,.p3,.p4,.p5{grid-column:1/-1;margin-top:0}
+  .p2 img,.p3 img,.p5 img{aspect-ratio:4/3}
+  .badge{width:94px;height:94px;top:-28px;left:auto;right:-6px}
+  .admin-bar{bottom:12px;gap:12px;padding:10px 10px 10px 16px;border-radius:18px}
+  .ab-status{display:none}
+  .ab-btn{padding:8px 12px}
+  .quote-sec{padding:84px 0}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ======================= NAV ======================= -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo">Nalanda Interio<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="#services">What we do</a>
+      <a href="#projects">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="btn btn-sm">Enquire <i data-lucide="arrow-up-right"></i></a>
+      <button class="burger" id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mm-close" id="mmClose" aria-label="Close menu"><i data-lucide="x"></i></button>
+  <a href="#services">What we do</a>
+  <a href="#projects">Work</a>
+  <a href="#process">Process</a>
+  <a href="#contact" class="mm-cta">Enquire</a>
+  <div class="mm-meta">Mon–Sat · 10:00–19:00<br>Rajgir Road, Nalanda, Bihar</div>
+</div>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker reveal" data-edit>Kitchen Design Studio · Nalanda, Bihar</p>
+        <h1 class="reveal" style="transition-delay:.06s" data-edit>Kitchens designed around the <span class="it">way you cook.</span></h1>
+        <p class="hero-sub reveal" style="transition-delay:.12s" data-edit>Nalanda Interio is a design-led studio crafting modular kitchens for homes across Bihar — measured, built and installed by our own team, from the first sketch to the final handle.</p>
+        <div class="hero-cta reveal" style="transition-delay:.18s">
+          <a href="#contact" class="btn">Book a free design visit <i data-lucide="arrow-up-right"></i></a>
+          <a href="#projects" class="link-arrow">See recent kitchens <i data-lucide="arrow-down"></i></a>
+        </div>
+        <div class="hero-meta reveal" style="transition-delay:.24s">
+          <span><i data-lucide="clock"></i><b data-edit>Mon–Sat · 10:00 – 19:00</b></span>
+          <span><i data-lucide="map-pin"></i><b data-edit>Rajgir Road, Nalanda</b></span>
+        </div>
+      </div>
+      <div class="hero-visual reveal" style="transition-delay:.15s">
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="circ" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+            <text><textPath href="#circ">MODULAR KITCHENS · DESIGN · BUILD ·</textPath></text>
+          </svg>
+          <span class="core"></span>
+        </div>
+        <img class="hero-img" data-img src="https://picsum.photos/seed/ni-hero/900/1100.jpg" alt="Warm modular kitchen by Nalanda Interio">
+        <div class="hero-chip"><span class="chip-dot"></span><span data-edit>Islampur · Oak &amp; sage kitchen</span></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num"><span data-count="480">480</span><span class="suf" data-edit>+</span></div>
+        <div class="stat-label" data-edit>Kitchens delivered</div>
+      </div>
+      <div class="stat reveal" style="transition-delay:.08s">
+        <div class="stat-num"><span data-count="12">12</span><span class="suf" data-edit>yrs</span></div>
+        <div class="stat-label" data-edit>Of craft &amp; installation</div>
+      </div>
+      <div class="stat reveal" style="transition-delay:.16s">
+        <div class="stat-num"><span data-count="32">32</span><span class="suf" data-edit>days</span></div>
+        <div class="stat-label" data-edit>Average install time</div>
+      </div>
+      <div class="stat reveal" style="transition-delay:.24s">
+        <div class="stat-num"><span data-count="5">5</span><span class="suf" data-edit>yr</span></div>
+        <div class="stat-label" data-edit>Warranty on every kitchen</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-group">
+      <span>Modular kitchens</span><i class="dia"></i><span>3D design</span><i class="dia"></i><span>Countertops</span><i class="dia"></i><span>Tall units &amp; storage</span><i class="dia"></i><span>Renovation</span><i class="dia"></i><span>Lighting &amp; utilities</span><i class="dia"></i>
+    </div>
+    <div class="mq-group">
+      <span>Modular kitchens</span><i class="dia"></i><span>3D design</span><i class="dia"></i><span>Countertops</span><i class="dia"></i><span>Tall units &amp; storage</span><i class="dia"></i><span>Renovation</span><i class="dia"></i><span>Lighting &amp; utilities</span><i class="dia"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= SERVICES ======================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="eb-idx" data-edit>01</span><span class="eb-line"></span><span data-edit>What we do</span></div>
+        <h2 data-edit>Everything a kitchen needs. <span class="it">Nothing it doesn't.</span></h2>
+      </div>
+      <p class="sec-note" data-edit>From the first measurement to the last handle — one team, no subcontractors, no surprises.</p>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc reveal">
+        <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+          <span class="svc-no">01</span>
+          <span class="svc-title" data-edit>Modular kitchens</span>
+          <span class="svc-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="svc-body"><div class="svc-body-in"><div class="svc-cols">
+          <div>
+            <p class="svc-desc" data-edit>L-shaped, U-shaped, island and parallel layouts — carcasses in BWP-grade plywood, soft-close hardware throughout, and finishes from laminate to high-gloss acrylic.</p>
+            <p class="svc-tags" data-edit>BWP plywood · Soft-close hardware · Acrylic &amp; laminate finishes</p>
+          </div>
+          <img class="svc-img" data-img src="https://picsum.photos/seed/ni-svc1/640/400.jpg" alt="Modular kitchen">
+        </div></div></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+          <span class="svc-no">02</span>
+          <span class="svc-title" data-edit>Kitchen renovation</span>
+          <span class="svc-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="svc-body"><div class="svc-body-in"><div class="svc-cols">
+          <div>
+            <p class="svc-desc" data-edit>We strip, re-route and rebuild existing kitchens — plumbing, electrical and civil work handled end-to-end, with your family back in the kitchen in under three weeks.</p>
+            <p class="svc-tags" data-edit>Civil &amp; plumbing · Electrical rework · 3-week turnaround</p>
+          </div>
+          <img class="svc-img" data-img src="https://picsum.photos/seed/ni-svc2/640/400.jpg" alt="Kitchen renovation">
+        </div></div></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+          <span class="svc-no">03</span>
+          <span class="svc-title" data-edit>Countertops &amp; backsplash</span>
+          <span class="svc-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="svc-body"><div class="svc-body-in"><div class="svc-cols">
+          <div>
+            <p class="svc-desc" data-edit>Quartz, granite and solid-surface counters cut to your cooking habits, paired with easy-clean backsplashes and honest advice on what will last in an Indian kitchen.</p>
+            <p class="svc-tags" data-edit>Quartz &amp; granite · Seamless joins · Heat &amp; stain resistant</p>
+          </div>
+          <img class="svc-img" data-img src="https://picsum.photos/seed/ni-svc3/640/400.jpg" alt="Countertops">
+        </div></div></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+          <span class="svc-no">04</span>
+          <span class="svc-title" data-edit>Storage &amp; tall units</span>
+          <span class="svc-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="svc-body"><div class="svc-body-in"><div class="svc-cols">
+          <div>
+            <p class="svc-desc" data-edit>Pantry pull-outs, corner carousels, bottle units and overhead lofts — every inch planned around what your family actually owns and uses daily.</p>
+            <p class="svc-tags" data-edit>Tall pantries · Corner carousels · Under-sink organisation</p>
+          </div>
+          <img class="svc-img" data-img src="https://picsum.photos/seed/ni-svc4/640/400.jpg" alt="Kitchen storage">
+        </div></div></div>
+      </div>
+
+      <div class="svc reveal">
+        <div class="svc-head" role="button" tabindex="0" aria-expanded="false">
+          <span class="svc-no">05</span>
+          <span class="svc-title" data-edit>Lighting &amp; utilities</span>
+          <span class="svc-plus"><i data-lucide="plus"></i></span>
+        </div>
+        <div class="svc-body"><div class="svc-body-in"><div class="svc-cols">
+          <div>
+            <p class="svc-desc" data-edit>Task lighting under the counters, chimney and hob selection, water-purifier and bin integration — the quiet details that make a kitchen genuinely work.</p>
+            <p class="svc-tags" data-edit>Under-cabinet lighting · Chimney &amp; hob · Appliance integration</p>
+          </div>
+          <img class="svc-img" data-img src="https://picsum.photos/seed/ni-svc5/640/400.jpg" alt="Kitchen lighting">
+        </div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="svc-preview" id="svcPreview"><img alt=""></div>
+
+<!-- ======================= PROJECTS ======================= -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="eb-idx" data-edit>02</span><span class="eb-line"></span><span data-edit>Selected work</span></div>
+        <h2 data-edit>Kitchens we're <span class="it">proud of.</span></h2>
+      </div>
+      <p class="sec-note" data-edit>A few recent kitchens from homes across Nalanda, Patna and Bihar Sharif.</p>
+    </div>
+
+    <div class="proj-grid">
+      <figure class="proj p1 reveal">
+        <div class="ph"><img data-img src="https://picsum.photos/seed/ni-p1/1200/820.jpg" alt="The Sharma Residence kitchen"></div>
+        <figcaption class="proj-cap">
+          <span class="proj-name" data-edit>The Sharma Residence</span>
+          <span class="proj-meta" data-edit>Islampur · L-shaped modular kitchen</span>
+        </figcaption>
+      </figure>
+
+      <figure class="proj p2 reveal" style="transition-delay:.08s">
+        <div class="ph"><img data-img src="https://picsum.photos/seed/ni-p2/800/940.jpg" alt="Verma House kitchen"></div>
+        <figcaption class="proj-cap">
+          <span class="proj-name" data-edit>Verma House</span>
+          <span class="proj-meta" data-edit>Patna · Island kitchen in oak &amp; sage</span>
+        </figcaption>
+      </figure>
+
+      <figure class="proj p3 reveal">
+        <div class="ph"><img data-img src="https://picsum.photos/seed/ni-p3/800/880.jpg" alt="Kumar Flat kitchen"></div>
+        <figcaption class="proj-cap">
+          <span class="proj-name" data-edit>Kumar Flat</span>
+          <span class="proj-meta" data-edit>Bihar Sharif · Compact parallel kitchen</span>
+        </figcaption>
+      </figure>
+
+      <figure class="proj p4 reveal" style="transition-delay:.08s">
+        <div class="ph"><img data-img src="https://picsum.photos/seed/ni-p4/1200/750.jpg" alt="Farmhouse kitchen"></div>
+        <figcaption class="proj-cap">
+          <span class="proj-name" data-edit>The Farmhouse Kitchen</span>
+          <span class="proj-meta" data-edit>Rajgir · Open kitchen with breakfast counter</span>
+        </figcaption>
+      </figure>
+
+      <figure class="proj p5 reveal">
+        <div class="ph"><img data-img src="https://picsum.photos/seed/ni-p5/1600/620.jpg" alt="Studio showcase kitchen"></div>
+        <figcaption class="proj-cap">
+          <span class="proj-name" data-edit>Studio Showcase</span>
+          <span class="proj-meta" data-edit>Nalanda · Our display kitchen</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROCESS ======================= -->
+<section id="process" class="dark-sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow"><span class="eb-idx" data-edit>03</span><span class="eb-line"></span><span data-edit>How we work</span></div>
+        <h2 data-edit>From first sketch to <span class="it">first meal.</span></h2>
+      </div>
+      <p class="sec-note" data-edit>A fixed, transparent schedule — you'll know exactly when your kitchen arrives.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-no">01</div>
+        <div>
+          <h3 class="step-title" data-edit>Measure &amp; brief</h3>
+          <p class="step-desc" data-edit>We visit your home, measure the space and understand how your family cooks — every decision downstream comes from that conversation.</p>
+        </div>
+        <span class="step-when" data-edit>Week 1</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-no">02</div>
+        <div>
+          <h3 class="step-title" data-edit>Design &amp; 3D views</h3>
+          <p class="step-desc" data-edit>Layouts, finishes and a photorealistic 3D view of your kitchen, revised until every drawer feels right.</p>
+        </div>
+        <span class="step-when" data-edit>Week 1–2</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-no">03</div>
+        <div>
+          <h3 class="step-title" data-edit>Factory build</h3>
+          <p class="step-desc" data-edit>Carcasses and shutters are manufactured to the millimetre at our workshop while your site is prepared in parallel.</p>
+        </div>
+        <span class="step-when" data-edit>Week 2–4</span>
+      </div>
+      <div class="step reveal">
+        <div class="step-no">04</div>
+        <div>
+          <h3 class="step-title" data-edit>Install &amp; handover</h3>
+          <p class="step-desc" data-edit>Our own fitters install, tune every hinge and door, then hand over with a 5-year written warranty.</p>
+        </div>
+        <span class="step-when" data-edit>Week 4–5</span>
+      </div>
+    </div>
+
+    <p class="proc-note reveal"><span class="chip-dot"></span><span data-edit>Most kitchens are handed over within 4–5 weeks of design sign-off.</span></p>
+  </div>
+</section>
+
+<!-- ======================= QUOTE ======================= -->
+<section class="quote-sec">
+  <div class="wrap">
+    <span class="quote-mark reveal" aria-hidden="true">&ldquo;</span>
+    <blockquote class="quote-text reveal" style="transition-delay:.08s" data-edit>They didn't just install a kitchen — they asked how we cook, then drew it around us. Two monsoons later, not a single hinge has failed.</blockquote>
+    <p class="quote-by reveal" style="transition-delay:.14s" data-edit>Meena Sharma · Islampur · Modular kitchen, 2022</p>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow"><span class="eb-idx" data-edit>04</span><span class="eb-line"></span><span data-edit>Get in touch</span></div>
+        <h2 data-edit>Let's design <span class="it">your kitchen.</span></h2>
+        <p class="contact-lede" data-edit>Tell us about your space and we'll visit with samples, layouts and an honest quote — the first design visit is always free.</p>
+        <div class="c-rows">
+          <div class="c-row">
+            <span class="c-ic"><i data-lucide="phone"></i></span>
+            <div><div class="c-lab">Call us</div><a class="c-val" href="tel:+919000000000" data-edit>+91 90000 00000</a></div>
+          </div>
+          <div class="c-row">
+            <span class="c-ic"><i data-lucide="message-circle"></i></span>
+            <div><div class="c-lab">WhatsApp</div><a class="c-val" href="https://wa.me/919000000000" data-edit>+91 90000 00000</a></div>
+          </div>
+          <div class="c-row">
+            <span class="c-ic"><i data-lucide="mail"></i></span>
+            <div><div class="c-lab">Email</div><a class="c-val" href="mailto:hello@nalandainterio.in" data-edit>hello@nalandainterio.in</a></div>
+          </div>
+          <div class="c-row">
+            <span class="c-ic"><i data-lucide="map-pin"></i></span>
+            <div><div class="c-lab">Studio</div><span class="c-val" data-edit>Rajgir Road, Nalanda, Bihar 803116</span></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="form-card reveal" id="enquiryForm" style="transition-delay:.1s" novalidate>
+        <h3 class="f-title">Request a callback</h3>
+        <p class="f-sub">We usually call back within a few working hours.</p>
+        <div class="field" id="fName">
+          <label for="inName">Your name</label>
+          <input id="inName" type="text" autocomplete="name">
+          <p class="f-err">Please tell us your name.</p>
+        </div>
+        <div class="field" id="fPhone">
+          <label for="inPhone">Phone number</label>
+          <input id="inPhone" type="tel" inputmode="tel" autocomplete="tel">
+          <p class="f-err">Please enter a valid 10-digit phone number.</p>
+        </div>
+        <div class="field">
+          <label for="inMsg">About your kitchen <span class="opt">(optional)</span></label>
+          <textarea id="inMsg" rows="3" placeholder="Size, location, when you'd like to start…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Request a callback <i data-lucide="arrow-up-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-word reveal">Nalanda Interio<span class="fdot">.</span></div>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-h">Nalanda Interio</div>
+        <p data-edit>A design-led kitchen studio in Nalanda, Bihar. We measure, design, build and install modular kitchens — with our own team and a 5-year warranty on every hinge.</p>
+      </div>
+      <div>
+        <div class="foot-h">Explore</div>
+        <a href="#services">What we do</a>
+        <a href="#projects">Work</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <div class="foot-h">Services</div>
+        <a href="#services">Modular kitchens</a>
+        <a href="#services">Kitchen renovation</a>
+        <a href="#services">Countertops</a>
+        <a href="#services">Storage &amp; tall units</a>
+      </div>
+      <div>
+        <div class="foot-h">Studio</div>
+        <p>Rajgir Road, Nalanda,<br>Bihar 803116</p>
+        <p>Mon–Sat · 10:00–19:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Nalanda Interio · All rights reserved</span>
+      <button class="owner-link" id="ownerLoginBtn"><i data-lucide="lock"></i>Owner login</button>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= LOGIN MODAL ======================= -->
+<div class="modal" id="loginModal">
+  <div class="modal-card" id="loginCard">
+    <button class="m-close" data-close aria-label="Close"><i data-lucide="x"></i></button>
+    <h3 class="m-title">Owner login</h3>
+    <p class="m-sub">Sign in to edit your website content.</p>
+    <form id="loginForm" novalidate>
+      <div class="m-field">
+        <label for="loginUser">Login ID</label>
+        <input id="loginUser" type="text" autocomplete="username">
+      </div>
+      <div class="m-field">
+        <label for="loginPass">Password</label>
+        <input id="loginPass" type="password" autocomplete="current-password">
+      </div>
+      <p class="m-error" id="loginError">Incorrect ID or password. Please try again.</p>
+      <button type="submit" class="btn m-btn">Sign in <i data-lucide="arrow-up-right"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- ======================= IMAGE SWAP MODAL ======================= -->
+<div class="modal" id="imgModal">
+  <div class="modal-card modal-img-card">
+    <button class="m-close" data-close aria-label="Close"><i data-lucide="x"></i></button>
+    <h3 class="m-title">Replace photo</h3>
+    <p class="m-sub">Pick a new image from your device, or paste a link.</p>
+    <div class="img-prev-box"><img id="imgPrev" alt="Preview"></div>
+    <label class="upload-btn"><i data-lucide="upload"></i>Upload from your device<input type="file" id="imgFile" accept="image/*"></label>
+    <div class="m-field">
+      <label for="imgUrl">Or paste an image link</label>
+      <input id="imgUrl" type="url" placeholder="https://…">
+    </div>
+    <div class="m-row">
+      <button class="btn m-btn" id="imgApply">Apply photo</button>
+      <button class="btn btn-ghost m-btn" id="imgCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= ADMIN BAR / CHIPS / TOASTS ======================= -->
+<div class="admin-bar" id="adminBar">
+  <span class="ab-user"><span class="ab-live"></span><i data-lucide="pencil"></i>Editing as Nalanda</span>
+  <span class="ab-status"><span class="ab-dot" id="abDot"></span><span id="abStatusTxt">All changes saved</span></span>
+  <span class="ab-actions">
+    <button class="ab-btn primary" id="btnDone"><i data-lucide="check"></i>Done</button>
+    <button class="ab-btn danger" id="btnReset"><i data-lucide="rotate-ccw"></i><span>Reset content</span></button>
+    <button class="ab-btn" id="btnLogout"><i data-lucide="log-out"></i>Log out</button>
+  </span>
+</div>
+
+<div class="img-chip" id="imgChip"><i data-lucide="image"></i>Change photo</div>
+<div class="toasts" id="toasts"></div>
+
+<script>
+/* ================= credentials & storage keys ================= */
+const AUTH_USER = 'Nalanda', AUTH_PASS = 'Pass';
+const LS_CONTENT = 'ni-content-v1', SS_AUTH = 'ni-auth';
+
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+/* ================= restore saved content FIRST ================= */
+(function restore(){
+  try{
+    const data = JSON.parse(localStorage.getItem(LS_CONTENT));
+    if(!data) return;
+    const t = $$('[data-edit]'), im = $$('[data-img]');
+    (data.t||[]).forEach((h,i)=>{ if(t[i]) t[i].innerHTML = h; });
+    (data.i||[]).forEach((s,i)=>{ if(im[i] && s) im[i].setAttribute('src', s); });
+  }catch(e){}
+})();
+
+ $('#year').textContent = new Date().getFullYear();
+if(window.lucide) lucide.createIcons();
+
+/* ================= toasts ================= */
+function toast(msg, icon='check'){
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.innerHTML = `<i data-lucide="${icon}"></i><span>${msg}</span>`;
+  $('#toasts').appendChild(t);
+  if(window.lucide) lucide.createIcons();
+  setTimeout(()=>{ t.classList.add('out'); setTimeout(()=>t.remove(), 320); }, 3600);
+}
+
+/* ================= scroll reveal & counters ================= */
+const rObs = new IntersectionObserver(es=>{
+  es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); rObs.unobserve(en.target); } });
+},{threshold:.12, rootMargin:'0px 0px -40px'});
+ $$('.reveal').forEach(el=>rObs.observe(el));
+
+function animCount(el){
+  const target = +el.dataset.count, dur = 1400, t0 = performance.now();
+  (function tick(t){
+    const p = Math.min((t - t0)/dur, 1), eased = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(target * eased);
+    if(p < 1) requestAnimationFrame(tick);
+  })(t0);
+}
+const cObs = new IntersectionObserver(es=>{
+  es.forEach(en=>{ if(en.isIntersecting){ animCount(en.target); cObs.unobserve(en.target); } });
+},{threshold:.6});
+ $$('[data-count]').forEach(el=>cObs.observe(el));
+
+/* ================= services accordion ================= */
+ $$('.svc').forEach(svc=>{
+  const head = svc.querySelector('.svc-head');
+  const toggle = ()=>{
+    const open = svc.classList.contains('open');
+    $$('.svc.open').forEach(o=>{ o.classList.remove('open'); o.querySelector('.svc-head').setAttribute('aria-expanded','false'); });
+    if(!open){ svc.classList.add('open'); head.setAttribute('aria-expanded','true'); }
+  };
+  head.addEventListener('click', toggle);
+  head.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+});
+
+/* floating image preview on service rows (desktop only) */
+const fine = matchMedia('(min-width:900px) and (pointer:fine)');
+const prev = $('#svcPreview'), prevImg = prev.querySelector('img');
+ $$('.svc').forEach(svc=>{
+  svc.querySelector('.svc-head').addEventListener('mouseenter', ()=>{
+    if(!fine.matches || svc.classList.contains('open')) return;
+    prevImg.src = svc.querySelector('.svc-img').src;
+    prev.classList.add('on');
+  });
+  svc.addEventListener('mouseleave', ()=> prev.classList.remove('on'));
+});
+ $('#services').addEventListener('mousemove', e=>{
+  if(!prev.classList.contains('on')) return;
+  prev.style.left = Math.min(e.clientX + 30, innerWidth - 280) + 'px';
+  prev.style.top  = Math.max(20, e.clientY - 200) + 'px';
+});
+
+/* ================= mobile menu ================= */
+const mobileMenu = $('#mobileMenu');
+ $('#burger').addEventListener('click', ()=> mobileMenu.classList.add('open'));
+ $('#mmClose').addEventListener('click', ()=> mobileMenu.classList.remove('open'));
+ $$('.mobile-menu a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
+
+/* ================= modals ================= */
+function openModal(m){ m.classList.add('show'); document.body.classList.add('locked'); }
+function closeModal(m){ m.classList.remove('show'); document.body.classList.remove('locked'); }
+ $$('.modal').forEach(m=> m.addEventListener('click', e=>{ if(e.target === m) closeModal(m); }));
+ $$('[data-close]').forEach(b=> b.addEventListener('click', ()=> closeModal(b.closest('.modal'))));
+document.addEventListener('keydown', e=>{
+  if(e.key === 'Escape'){
+    $$('.modal').forEach(m=> m.classList.remove('show'));
+    document.body.classList.remove('locked');
+    mobileMenu.classList.remove('open');
+  }
+});
+
+/* ================= login ================= */
+const loginModal = $('#loginModal'), loginCard = $('#loginCard'), loginError = $('#loginError');
+ $('#ownerLoginBtn').addEventListener('click', ()=>{
+  loginError.classList.remove('show');
+  openModal(loginModal);
+  setTimeout(()=> $('#loginUser').focus(), 250);
+});
+ $('#loginForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const u = $('#loginUser').value.trim(), p = $('#loginPass').value;
+  if(u === AUTH_USER && p === AUTH_PASS){
+    sessionStorage.setItem(SS_AUTH, '1');
+    closeModal(loginModal);
+    e.target.reset();
+    enterEdit(true);
+  }else{
+    loginError.classList.add('show');
+    loginCard.classList.add('shake');
+    setTimeout(()=> loginCard.classList.remove('shake'), 480);
+    $('#loginPass').value = '';
+    $('#loginPass').focus();
+  }
+});
+
+/* ================= edit mode ================= */
+let editing = false, saveTimer = null;
+const adminBar = $('#adminBar'), abDot = $('#abDot'), abStatusTxt = $('#abStatusTxt');
+
+function setStatus(state){
+  if(state === 'saving'){ abDot.classList.add('busy'); abStatusTxt.textContent = 'Saving…'; }
+  else { abDot.classList.remove('busy'); abStatusTxt.textContent = 'All changes saved'; }
+}
+function save(){
+  const data = {
+    t: $$('[data-edit]').map(el=> el.innerHTML),
+    i: $$('[data-img]').map(el=> el.getAttribute('src'))
+  };
+  try{ localStorage.setItem(LS_CONTENT, JSON.stringify(data)); }catch(e){}
+  setStatus('saved');
+}
+function scheduleSave(){ setStatus('saving'); clearTimeout(saveTimer); saveTimer = setTimeout(save, 650); }
+
+function enterEdit(welcome){
+  editing = true;
+  document.body.classList.add('editing');
+  adminBar.classList.add('show');
+  $$('[data-edit]').forEach(el=> el.setAttribute('contenteditable','true'));
+  toast(welcome
+    ? "Welcome back, Nalanda — click any dashed text or photo to edit it."
+    : "Edit mode is on — you're still signed in.", 'pencil');
+}
+function exitEdit(){
+  editing = false;
+  document.body.classList.remove('editing');
+  adminBar.classList.remove('show');
+  $$('[data-edit]').forEach(el=> el.removeAttribute('contenteditable'));
+  $('#imgChip').classList.remove('on');
+}
+
+/* auto-save while typing */
+document.addEventListener('input', e=>{
+  if(editing && e.target.closest && e.target.closest('[data-edit]')) scheduleSave();
+});
+window.addEventListener('beforeunload', ()=>{ if(editing) save(); });
+
+/* admin bar actions */
+ $('#btnDone').addEventListener('click', ()=>{
+  save(); exitEdit();
+  toast("All changes saved — you're still signed in.", 'check');
+});
+ $('#btnLogout').addEventListener('click', ()=>{
+  save(); sessionStorage.removeItem(SS_AUTH); exitEdit();
+  toast('Logged out of edit mode.', 'log-out');
+});
+let resetArmed = false, resetTimer = null;
+const btnReset = $('#btnReset');
+btnReset.addEventListener('click', ()=>{
+  if(!resetArmed){
+    resetArmed = true;
+    btnReset.querySelector('span').textContent = 'Sure? Click again';
+    resetTimer = setTimeout(()=>{ resetArmed = false; btnReset.querySelector('span').textContent = 'Reset content'; }, 3000);
+  }else{
+    clearTimeout(resetTimer);
+    localStorage.removeItem(LS_CONTENT);
+    location.reload(); /* auth persists for the session, edit mode returns automatically */
+  }
+});
+
+/* while editing: block link navigation inside editable content, open photo editor */
+document.addEventListener('click', e=>{
+  if(!editing) return;
+  const a = e.target.closest('a');
+  if(a && (a.querySelector('[data-edit]') || a.closest('[data-edit]'))) e.preventDefault();
+  const img = e.target.closest('[data-img]');
+  if(img){ e.preventDefault(); openImgModal(img); }
+});
+
+/* photo "Change photo" chip that follows the cursor */
+const imgChip = $('#imgChip');
+document.addEventListener('mousemove', e=>{
+  if(!editing){ return; }
+  const over = e.target.closest && e.target.closest('[data-img]');
+  if(over){
+    imgChip.classList.add('on');
+    imgChip.style.left = (e.clientX + 16) + 'px';
+    imgChip.style.top  = (e.clientY + 16) + 'px';
+  }else imgChip.classList.remove('on');
+});
+
+/* ================= image swap modal ================= */
+const imgModal = $('#imgModal'), imgUrl = $('#imgUrl'), imgFile = $('#imgFile'), imgPrev = $('#imgPrev');
+let currentImg = null, fileData = null;
+
+function openImgModal(img){
+  currentImg = img; fileData = null;
+  imgUrl.value = ''; imgFile.value = '';
+  imgPrev.src = img.currentSrc || img.src;
+  openModal(imgModal);
+}
+imgFile.addEventListener('change', ()=>{
+  const f = imgFile.files[0];
+  if(!f) return;
+  const r = new FileReader();
+  r.onload = ()=>{ fileData = r.result; imgPrev.src = fileData; imgUrl.value = ''; };
+  r.readAsDataURL(f);
+});
+imgUrl.addEventListener('input', ()=>{
+  fileData = null;
+  if(imgUrl.value.trim()) imgPrev.src = imgUrl.value.trim();
+});
+ $('#imgApply').addEventListener('click', ()=>{
+  const src = fileData || imgUrl.value.trim();
+  if(!src){ toast('Choose a file or paste an image link first.', 'image'); return; }
+  if(!fileData && !/^(https?:\/\/|data:image)/.test(src)){ toast("That doesn't look like a valid image link.", 'x'); return; }
+  currentImg.src = src;
+  save(); closeModal(imgModal);
+  toast('Photo updated.', 'image');
+});
+ $('#imgCancel').addEventListener('click', ()=> closeModal(imgModal));
+
+/* ================= enquiry form ================= */
+ $('#enquiryForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const name = $('#inName').value.trim();
+  const phone = $('#inPhone').value.replace(/\D/g,'');
+  const nameOk = name.length > 1, phoneOk = phone.length >= 10;
+  $('#fName').classList.toggle('err', !nameOk);
+  $('#fPhone').classList.toggle('err', !phoneOk);
+  if(!nameOk || !phoneOk) return;
+  e.target.reset();
+  toast('Thank you! We\u2019ll call you back within a day.', 'phone');
+});
+
+/* ================= session: auto-enter edit mode ================= */
+if(sessionStorage.getItem(SS_AUTH) === '1'){
+  setTimeout(()=> enterEdit(false), 450);
+}
+</script>
+</body>
+</html>
